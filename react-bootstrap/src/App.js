@@ -1,29 +1,54 @@
 // import logo from './logo.svg';
 //import './App.css';
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home } from './Home/Home.js';
-import { About } from './About/About.js';
-import { Contact } from './Contact/Contact.js';
+// import React, { Component } from 'react';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import { Home } from './Home/Home.js';
+// import { About } from './About/About.js';
+// import { Contact } from './Contact/Contact.js';
+// import { navBar } from './Components/navBar/navBar';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
+// class App extends Component {
+//   render() {
+//     return (
+//       <React.Fragment>
+//         <Route path="/" component={navBar} />
+//         <Router>
+//           <Switch>
+//             <Route exact path="/" component={Home} />
+//             <Route path="/about" component={About} />
+//             <Route path="/contact" component={Contact} />            
+//             {/* <Route component={NoMatch} /> */}
+//           </Switch>
+//         </Router>        
+//       </React.Fragment>
+//     );
+//   }
+// }
+
+import React, { Component } from 'react';
+import Route from 'react-router-dom/Route'
+import Agregar from './pages/agregar'
+import Home from './pages/home'
+import { BrowserRouter } from 'react-router-dom'
+import Nav from "./components/navbar"
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Router>
-          <Switch>
+      <div>
+        <BrowserRouter>
+          <div>
+            <Nav />
             <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />            
-            {/* <Route component={NoMatch} /> */}
-          </Switch>
-        </Router>        
-      </React.Fragment>
+            <Route path="/agregar" component={Agregar} />
+          </div>
+        </BrowserRouter>
+      </div>
     );
   }
 }
 
-
+export default App;
 
 
 
