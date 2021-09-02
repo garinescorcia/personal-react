@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Home = () => (
+const Home = () => (
     <section className="jumbotron jumbotron-fluid sec-profile container" id="profile">
         <div className="container my_profile">
             <h1 className="text-light text-center">Garin Escorcia Ariza</h1>
@@ -8,3 +8,5 @@ export const Home = () => (
         </div>	
     </section>
 )
+
+export default Home;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink, withRouter}  from 'react-router-dom'
+import { NavLink, withRouter }  from 'react-router-dom'
 class Navbar extends React.Component {
     getNavLinkClass = (path) => {
         return this.props.location.pathname === path ? 'active' : '';
